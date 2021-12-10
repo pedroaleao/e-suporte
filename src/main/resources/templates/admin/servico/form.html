@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html th:replace="˜{adminlt3 :: layout (˜{::title}, ˜{::main}, _, _)}">
+<html th:replace="~{adminlte3 :: layout (~{::title}, ~{::main}, _, _)}">
 <head>
     <title>Formulario de servico</title>
 </head>
@@ -11,6 +11,29 @@
                         <div class="card-header">
                             <div class="card-title">Formulario de servicos</div>
                         </div>
+                       <div class="card-body">
+
+                           <form method="POST" th:object="${servico}">
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="nome"> Nome</label>
+                                        <input type="text" class="form-control" th:field="*{nome}">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label for="valorMinimo"> Valor Minimo</label>
+                                        <input type="text" class="form-control" th:field="*{valorMinimo}">
+                                    </div>
+                                </div>
+                            </div>
+
+                           </form>
+
+                       </div>
                    </div>
                </div>
            </div>
